@@ -1,0 +1,39 @@
+body {
+    font-family: $fontBase;
+}
+
+.appContainer {
+    width: 100%;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.mainMenu, .authButtonsContainer {
+    margin: 20px;
+
+    a {
+        padding: 10px 10px;
+        cursor: pointer;
+        font-size: 18px;
+        border: 1px solid transparent;  
+     }
+
+     a:hover {
+         border: 1px solid $colorBlack;
+     }
+}
+
+.authButtonsContainer {
+    a {
+        color: $colorGray;
+        font-size: 14px;
+    }
+
+    a:hover {
+        border: 1px solid $colorYellow;
+    }
+}

@@ -1,0 +1,19 @@
+.heroContainer {
+    display: flex;
+    height: 70vh;
+}
+
+.heroImage {
+    width: 50%;
+    background-image: url("/assets/Home-Hero-Image.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.heroText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
