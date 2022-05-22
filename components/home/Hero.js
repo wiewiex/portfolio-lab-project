@@ -5,9 +5,12 @@ export default function Hero () {
         <main className={style.heroContainer}>
             <div className={style.heroImage}/>
             <div className={style.heroText}>
-                <h2>Title</h2>
-                <div>line</div>
-                <div>CTA</div>
+                <h2 className={style.title}>Zacznij pomagać!<br/>Oddaj niechciane rzeczy w zaufane ręce</h2>
+                <img src="/assets/Decoration.svg"/>
+                <div className={style.ctaContainer}>
+                    <span>ODDAJ<br/>RZECZY</span>
+                    <span>ZORGANIZUJ<br/>ZBIÓRKĘ</span>
+                </div>
             </div>
         </main>
     )

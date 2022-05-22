@@ -1,10 +1,16 @@
+@import "../globals/colors.scss";
+
 .heroContainer {
+    position: relative;
     display: flex;
-    height: 70vh;
+    height: 760px;
 }
 
 .heroImage {
+    position: relative;
+    top: -120px;
     width: 50%;
+    height: 880px;
     background-image: url("/assets/Home-Hero-Image.jpg");
     background-position: center;
     background-size: cover;
@@ -16,4 +22,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    img {
+        margin: 30px;
+    }
+}
+
+.title {
+    font-size: 38px;
+    text-align: center;
+}
+
+.ctaContainer {
+    display: flex;
+    span {
+        cursor: pointer;
+        margin: 10px;
+        text-align: center;
+        padding: 15px 50px;
+        border: 1px solid $colorBlack;
+    }
 }
