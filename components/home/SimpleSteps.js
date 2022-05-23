@@ -1,8 +1,9 @@
 import style from "../../styles/home/SimpleSteps.module.scss"
+import Link from "next/link"
 
 export default function SimpleSteps() {
     return(
-        <section className={style.simpleStepsContainer}>
+        <section className={style.simpleStepsContainer} id="o_co_chodzi">
             <div className={style.title}>
                 <h2>Wystarczą 4 proste kroki</h2>
                 <img src="/assets/Decoration.svg"/>
@@ -34,7 +35,7 @@ export default function SimpleSteps() {
                 </div>
             </div>
             <div className={style.cta}>
-                <h2>ODDAJ<br/>RZECZY</h2>
+                <Link href="/login"><h2>ODDAJ<br/>RZECZY</h2></Link>
             </div>
         </section>
     )

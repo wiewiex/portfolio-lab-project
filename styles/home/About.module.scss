@@ -1,0 +1,42 @@
+@import "../globals/colors.scss";
+
+.aboutContainer {
+    height: 700px;
+    display: flex;
+}
+
+.textContainer {
+    width: 50%;
+    background-color: $colorLightGray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 38px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 30px;
+        width: 50%;
+        letter-spacing: 0.6px;
+    }
+
+    .signature {
+        margin-right: 100px;
+        align-self: flex-end;
+    }
+
+}
+
+.imageContainer {
+    width: 50%;
+    background-image: url("/assets/People.jpg");
+    background-size: cover;
+}

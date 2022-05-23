@@ -60,12 +60,13 @@
 
 
 .cta {
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     h2 {
+        cursor: pointer;
         font-size: 38px;
         font-weight: 300;
         border: 1px solid $colorBlack;
