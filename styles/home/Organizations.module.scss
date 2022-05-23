@@ -1,0 +1,91 @@
+@import "../globals/colors.scss";
+
+.organizationsContainer {
+    color: $colorBlack;
+}
+
+.topBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+     h2 {
+         font-size: 38px;
+         margin: 50px 0 30px 0;
+     }
+
+     nav {
+         margin: 50px;
+
+         a {
+             padding: 20px 40px;
+             border: 1px solid transparent;
+             cursor: pointer;
+         }
+
+         a:hover {
+            border: 1px solid $colorBlack;
+         }
+     }
+
+     p {
+         max-width: 500px;
+         line-height: 1.3;
+         margin-bottom: 20px;
+         text-align: center;
+     }
+}
+
+.bottomBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    ul {
+        width: 1300px;
+
+        .singleOrganization {
+            display: flex;
+            border-bottom: 1px solid $colorGray;
+            padding: 20px 0;
+
+            .leftBox {
+                width: 70%;
+
+                h3 {
+                    font-size: 26px;
+                    margin-bottom: 5px;
+                    color: $colorGray;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+
+            }
+
+            .rightBox {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                color: $colorGray;
+            }
+        }
+    }
+
+    nav {
+        text-align: center;
+        margin: 30px;
+
+        a {
+            padding: 15px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        a:hover {
+            border: 1px solid $colorBlack;
+        }
+    }
+}

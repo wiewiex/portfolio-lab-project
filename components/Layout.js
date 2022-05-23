@@ -12,7 +12,7 @@ export default function Layout(props){
                     <Link href="/"><a>Start</a></Link>
                     <Link href="#o_co_chodzi"><a>O co chodzi?</a></Link>
                     <Link href="#o_nas"><a>O nas</a></Link>
-                    <a>Fundacja i organizacje</a>
+                    <Link href="#fundacja_i_organizacje"><a>Fundacja i organizacje</a></Link>
                     <a>Kontakt</a>                    
                 </nav>
             </header>
