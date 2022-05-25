@@ -3,7 +3,7 @@ import style from "../../styles/home/Contact.module.scss"
 export default function Contact () {
     return (
         <div className={style.contactAndFooterContainer}>
-            <section className={style.contactContainer}>
+            <section id="contact" className={style.contactContainer}>
                 <div className={style.formContainer}>
                     <h2>Skontaktuj się z nami</h2>
                     <img src="/assets/Decoration.svg"/>

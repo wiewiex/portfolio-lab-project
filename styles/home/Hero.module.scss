@@ -7,17 +7,15 @@
 }
 
 .heroImage {
-    position: relative;
-    top: -120px;
-    width: 50%;
-    height: 880px;
+    width: 60%;
     background-image: url("/assets/Home-Hero-Image.jpg");
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .heroText {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,6 +34,7 @@
 .ctaContainer {
     display: flex;
     span {
+        line-height: 1.2;
         cursor: pointer;
         margin: 10px;
         text-align: center;
