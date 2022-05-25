@@ -3,6 +3,7 @@ import Stats from "../components/home/Stats";
 import SimpleSteps from "../components/home/SimpleSteps";
 import About from "../components/home/About";
 import Organizations from "../components/home/Organizations";
+import Contact from "../components/home/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
    <SimpleSteps/>
    <About/>
    <Organizations/>
+   <Contact/>
    </>
   )
 }
