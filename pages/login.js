@@ -1,40 +1,63 @@
 import style from "../styles/login&signUp/login&signUp.module.scss";
 import firebaseApp from "../firebase.config"
-import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import Link from "next/link";
 
-const auth = getAuth(firebaseApp);
 
-const login = (e) => {
-    e.preventDefault;
-    const email = "kot@kot.pl";
-    const password = "kot123kot";
+export default function SignUp() {
+    const [inputValues, setInputValues] = useState({});
+    const [userMessage, setUserMessage] = useState(null);
 
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        console.log(userCredential);
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-    });
-}
+    const auth = getAuth(firebaseApp);
 
-export default function Login() {
+    const handleChange = (key, value) => {
+        
+        setInputValues(prevState => {
+            return {
+                ...prevState,
+                [key] : value
+            }
+        })
+
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const email = inputValues.email;
+        const password = inputValues.password;
+    
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            console.log(userCredential);
+            setUserMessage("Zostałeś pomyślnie zalogowany.")
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            setUserMessage(errorMessage)
+            console.log(errorCode);
+        });
+
+        document.querySelector("form").reset();
+    };
+    
     return(
         <main className={style.mainContainer}>
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2>Zaloguj się</h2>
             <img src="/assets/Decoration.svg"/>  
             <div className={style.inputs}>          
                 <h3>Email</h3>
-                <input type="email" name="email" />
+                <input type="email" onChange={e => handleChange("email", e.target.value)} />
                 <h3>Hasło</h3>
-                <input type="password" name="password" />
+                <input type="password" onChange={e => handleChange("password", e.target.value)}  />
             </div>
             <div className={style.buttons}>
-                <button>Załóż konto</button>
-                <button className={style.accentedButton}>Zaloguj się</button>
+                <Link href="/signup"><button>Załóż konto</button></Link>
+                <button type="submit" className={style.accentedButton}>Zaloguj</button>
             </div>
+            <p>{userMessage}</p>
         </form>
         </main>
     )
