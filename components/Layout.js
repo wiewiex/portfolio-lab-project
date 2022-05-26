@@ -7,7 +7,7 @@ export default function Layout(props){
             <header>
                 <div className="authButtonsContainer">
                     <Link href="/login"><a>Zaloguj</a></Link>
-                    <Link href="/singup"><a>Załóż konto</a></Link>
+                    <Link href="/signup"><a>Załóż konto</a></Link>
                 </div>
                 <nav className="mainMenu">                    
                     <Link href="/"><a>Start</a></Link>                

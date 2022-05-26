@@ -1,0 +1,60 @@
+@import "../globals/colors.scss";
+
+.mainContainer {
+    height: 500px;
+    padding-top: 100px;
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.inputs {
+    background-color: $colorLightGray;
+    padding: 30px 50px;
+    margin-bottom: 30px;
+
+    h3 {
+        font-weight: 600;
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $colorGray;
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+
+}
+
+.buttons {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        border: none;
+        font-size: 18px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .accentedButton {
+        border: 1px solid $colorBlack;
+        padding: 10px;
+    }
+}
