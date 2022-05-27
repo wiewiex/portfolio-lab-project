@@ -3,11 +3,14 @@ import firebaseApp from "../firebase.config"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { setUser } from "../redux/actions/user"
 
 
 export default function SignUp() {
     const [inputValues, setInputValues] = useState({});
     const [userMessage, setUserMessage] = useState(null);
+    const dispatch = useDispatch();
 
     const auth = getAuth(firebaseApp);
 
@@ -29,8 +32,9 @@ export default function SignUp() {
     
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            console.log(userCredential);
-            setUserMessage("Zostałeś pomyślnie zalogowany.")
+            // console.log(userCredential);
+            setUserMessage("Zostałeś pomyślnie zalogowany.");
+            dispatch(setUser(userCredential.user));
         })
         .catch((error) => {
             const errorCode = error.code;
