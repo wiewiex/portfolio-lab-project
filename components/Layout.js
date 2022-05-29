@@ -1,7 +1,6 @@
-import Link from "next/link"
-import { Link as Scroll} from "react-scroll"
-import { useSelector } from "react-redux"
-import { useEffect } from "react"
+import Link from "next/link";
+import { Link as Scroll} from "react-scroll";
+import { useSelector } from "react-redux";
 
 export default function Layout(props){
 

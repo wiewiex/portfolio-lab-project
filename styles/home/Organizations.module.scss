@@ -1,7 +1,7 @@
 @import "../globals/colors.scss";
 
 .organizationsContainer {
-    color: $colorBlack;
+    color: $colorBlack;    
 }
 
 .topBox {
@@ -21,6 +21,7 @@
              padding: 20px 40px;
              border: 1px solid transparent;
              cursor: pointer;
+             margin: 5px;
          }
 
          a:hover {
@@ -83,6 +84,7 @@
             padding: 15px;
             cursor: pointer;
             border: 1px solid transparent;
+            margin: 5px;
         }
 
         a:hover {
