@@ -1,0 +1,17 @@
+@import "../globals/colors.scss";
+
+.warningContainer {
+    width: 100%;
+    background-color: $colorYellow;
+    padding: 100px 140px;
+    box-sizing: border-box;
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}

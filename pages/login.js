@@ -1,5 +1,5 @@
 import style from "../styles/login&signUp/login&signUp.module.scss";
-import firebaseApp from "../firebase.config"
+import firebaseApp from "../firebase.config";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import Link from "next/link";

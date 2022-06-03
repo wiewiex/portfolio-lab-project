@@ -1,0 +1,76 @@
+@import "../globals/colors.scss";
+
+.heroContainer {
+    display: flex;
+    height: 718px;
+    position: relative;
+}
+
+.heroImage {
+    width: 1015px;
+    height: 853px;
+    position: relative;
+    top: -135px;
+    left: 0;
+    background-image: url("/assets/Form-Hero-Image.jpg");
+   
+    background-repeat: no-repeat;
+}
+
+.heroText {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin: 30px;
+    }
+}
+
+.title {
+    font-size: 38px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.steps {
+        font-size: 35px;
+        line-height: 1.2;
+        cursor: pointer;
+        margin: 10px;
+        text-align: center;
+        padding: 15px 50px;
+        margin-bottom: 50px;
+}
+
+.fourSteps {
+    display: flex;
+}
+
+.singleStep {
+    position: relative;
+    border: 1px solid $colorBlack;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(45deg);
+    margin: 10px;
+
+    p, span {
+        transform: rotate(-45deg);
+    }
+
+    span {
+        position: absolute;
+        top: -10px;
+        bottom: -80px;
+        right: 10px;
+    }
+    
+}

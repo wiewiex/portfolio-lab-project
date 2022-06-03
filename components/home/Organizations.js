@@ -2,7 +2,7 @@ import style from "../../styles/home/Organizations.module.scss";
 import firebaseApp from "../../firebase.config";
 import { getFirestore } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 
 export default function Organizations() {
@@ -65,6 +65,8 @@ export default function Organizations() {
 
     const setActivePage = (e) => {
 
+        // currentList.slice(currentPage *3, currentPage * 3 + 3)
+
         document.querySelector('.activePage').classList.remove("activePage");
         e.target.classList.add("activePage");
 
@@ -111,16 +113,15 @@ export default function Organizations() {
 
     },[currentList])
     
-    
+    // const aRef = useRef()
 
-
+    // console.log(aRef.current);
     return (
         <section id="fundacja_i_organizacje" className={style.organizationsContainer}>
             <div className={style.topBox}>
                 <h2>Komu pomagamy ?</h2>
                 <img src="/assets/Decoration.svg"/>
-                <nav>
-                    <style jsx>{'.activeList {border: 1px solid black;}'}</style>
+                <nav>                    
                     <a id="foundations" onClick={setActiveList} className="activeList">Fundacjom</a>
                     <a id="organizations"onClick={setActiveList}>Organizacjom pozarządowym</a>
                     <a id="fundraisings"onClick={setActiveList}>Lokalnym zbiórkom</a>
@@ -146,8 +147,13 @@ export default function Organizations() {
                     
                 </ul>
                 <nav>
+                    {/* {new Array(Math.ceil(currentList.length / 3)).fill(null).map((_, i) => (
+                        <li key={i} onClick={() => setActivePage(i)}>{i + 1}</li>
+                    ))} */}
                     <style jsx>{'.activePage {border: 1px solid black;}'}</style>
-                    <a id="page1" className="activePage" onClick={setActivePage}>1</a>
+                    <a id="page1" className="activePage" onClick={setActivePage}
+                    // ref={aRef}
+                    >1</a>
                     <a id="page2" onClick={setActivePage}>2</a>
                     <a id="page3" onClick={setActivePage}>3</a>                    
                 </nav>

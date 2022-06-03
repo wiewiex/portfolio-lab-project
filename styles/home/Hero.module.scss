@@ -1,25 +1,41 @@
 @import "../globals/colors.scss";
+@import "../globals/mixins.scss";
 
 .heroContainer {
     position: relative;
     display: flex;
-    height: 760px;
+    height: 750px;
+    @include mobile {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
 }
 
 .heroImage {
-    width: 60%;
+    width: 1368px;
+    height: 963px;
     background-image: url("/assets/Home-Hero-Image.jpg");
-    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
+    top: -134px;
+    @include mobile {
+        height: 510px;
+        position: inherit;
+        top: 0;
+        width: 100%;
+        background-size: contain;
+    }
 }
 
 .heroText {
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include mobile {
+        margin: 100px 0;
+    }
 
     img {
         margin: 30px;

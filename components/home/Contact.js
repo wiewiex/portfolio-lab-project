@@ -46,6 +46,8 @@ export default function Contact () {
              if (res.status === 'success') {
 
                 setUserMessage("Message successfully sent")
+                document.getElementById("contactForm").reset();
+
              }
 
              else setUserMessage(res.errors[0].msg);
@@ -64,7 +66,7 @@ export default function Contact () {
                 <div className={style.formContainer}>
                     <h2>Skontaktuj się z nami</h2>
                     <img src="/assets/Decoration.svg"/>
-                    <form onSubmit={handleSubmit}>
+                    <form id="contactForm" onSubmit={handleSubmit}>
                         <div className={style.senderDetails}>
                             <div >
                                 <h3>Wpisz swoje imię</h3>

@@ -1,0 +1,39 @@
+@import "../globals/colors.scss";
+
+.formsContainer {
+    height: 883px;
+    width: 1900px;
+    background-color: red;
+    background-image: url("/assets/Background-Form.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 140px 100px 140px;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100px;
+
+    p {
+        font-size: 24px;
+    }
+}
+
+.footer {
+
+    button {
+        padding: 20px 50px;
+        border: 1px color $colorBlack;
+        background-color: transparent;
+        margin: 0 20px;
+        cursor: pointer;
+    }
+
+}
+
+.separator {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
