@@ -3,6 +3,8 @@ import Page1 from "./form/page1";
 import Page2 from "./form/page2";
 import Page3 from "./form/page3";
 import Page4 from "./form/page4";
+import Page5 from "./form/page5";
+
 import { useState } from "react";
 
 export default function Form () {
@@ -26,6 +28,10 @@ export default function Form () {
         currentPage = <Page4/>
     }
 
+    if (pageNumber == 5) {
+        currentPage = <Page5/>
+    }
+
     return(
         <>
         <section className={style.formsContainer}>
@@ -37,7 +43,7 @@ export default function Form () {
             </div>
             <div className={style.footer}>
                 {pageNumber == 1 ? null : <button onClick={e => setPageNumber(prevState => prevState - 1)}>Wstecz</button>}
-                {pageNumber == 4 ? null :<button onClick={e => setPageNumber(prevState => prevState + 1)}>Dalej</button>}
+                {pageNumber == 6 ? null :<button onClick={e => setPageNumber(prevState => prevState + 1)}>Dalej</button>}
             </div>
         </section>
         <div className={style.separator}/>

@@ -1,34 +1,16 @@
-import style from "../../../styles/oddaj-rzeczy/form/Page4.module.scss";
-import { useDispatch } from "react-redux";
-import { setPage4Data } from "../../../redux/actions/dataFromForm";
-import { useState, useEffect } from "react";
+import style from "../../../styles/oddaj-rzeczy/form/Page5.module.scss";
+import { useSelector } from "react-redux";
 
+export default function Page5 () {
+    const data = useSelector(dataFromForm => dataFromForm);
 
-export default function Page4 () {
-
-    const dispatch = useDispatch();
-    const [page4State, setPage4State] = useState(null);
-
-    const handleChange = (key, value) => {
-        setPage4State(prevState => {
-            return {
-                ...prevState,
-                [key] : value
-            }
-        })
-    }
-
-    useEffect(()=>{
-
-        if (page4State) {
-        dispatch(setPage4Data(page4State));
-        }
-
-    },[page4State]);
+    console.log(data);
 
     return(
         <section className={style.formContainer}>
-            <h2>Padaj adres oraz termin odbioru przez kuriera</h2>
+            <h2>Podsumowanie Twojej darowizny</h2>
+            <h4>Oddajesz:</h4>
+            <div></div>
             <form>
                 <div className={style.address}>
                     <h5>Adres odbioru:</h5>
