@@ -36,7 +36,15 @@ export default function Form () {
         <>
         <section className={style.formsContainer}>
             <div className={style.header}>
-                <p>Krok {pageNumber}/4</p>
+                {(()=>{
+                    if (pageNumber <= 4) {
+                        return <p>Krok {pageNumber}/4</p>
+                    }
+
+                    else return null;
+                    
+                    })
+                ()}
             </div>
             <div className={style.mainContainer}>
                 {currentPage}

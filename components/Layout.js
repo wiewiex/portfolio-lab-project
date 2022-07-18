@@ -11,6 +11,7 @@ export default function Layout(props){
             <header>
                 <div className="authButtonsContainer">
                     <h3>{userData.user.email ? `Witaj ${userData.user.email}` : null}</h3>
+                    {userData.user.email ? <Link href="/oddaj-rzeczy"><a>Oddaj rzeczy</a></Link>  : null}
                     <Link href="/login"><a>Zaloguj</a></Link>
                     <Link href="/signup"><a>Załóż konto</a></Link>
                 </div>

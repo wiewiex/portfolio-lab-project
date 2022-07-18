@@ -29,8 +29,8 @@ export default function Page3 () {
         <form className={style.formContainer}>
             <div className={style.localizationContainer}>
                 <h2>Lokalizacja</h2>
-                <select name="miasto" className={style.customSelect} onChange={e => handleChange(e.target.name, e.target.value)}>
-                    <option selected value=" " disabled hidden>- wybierz -</option>
+                <select defaultValue="- wybierz -" name="miasto" className={style.customSelect} onChange={e => handleChange(e.target.name, e.target.value)}>
+                    <option disabled hidden>- wybierz -</option>
                     <option>Poznań</option>
                     <option>Warszawa</option>
                     <option>Kraków</option>

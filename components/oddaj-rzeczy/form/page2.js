@@ -30,8 +30,8 @@ export default function Page2 () {
             <h2>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h2>
             <div className={style.customSelectContainer}>
                 <p>Liczba 60l worków:</p>
-                <select className={style.customSelect} name="worki" onChange={e => handleChange(e.target.name, e.target.value)}>                        
-                <option selected value=" " disabled hidden>- wybierz -</option>
+                <select defaultValue="- wybierz -" className={style.customSelect} name="worki" onChange={e => handleChange(e.target.name, e.target.value)}>                        
+                    <option disabled hidden>- wybierz -</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
