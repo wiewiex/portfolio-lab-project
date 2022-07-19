@@ -13,23 +13,23 @@ export default function Form () {
     let currentPage;
 
     if (pageNumber == 1) {
-        currentPage = <Page1/>
+        currentPage = <Page1 setPageNumber={setPageNumber}/>
     }
 
     if (pageNumber == 2) {
-        currentPage = <Page2/>
+        currentPage = <Page2 setPageNumber={setPageNumber}/>
     }
 
     if (pageNumber == 3) {
-        currentPage = <Page3/>
+        currentPage = <Page3 setPageNumber={setPageNumber}/>
     }
 
     if (pageNumber == 4) {
-        currentPage = <Page4/>
+        currentPage = <Page4 setPageNumber={setPageNumber}/>
     }
 
     if (pageNumber == 5) {
-        currentPage = <Page5/>
+        currentPage = <Page5 setPageNumber={setPageNumber}/>
     }
 
     return(
@@ -48,11 +48,7 @@ export default function Form () {
             </div>
             <div className={style.mainContainer}>
                 {currentPage}
-            </div>
-            <div className={style.footer}>
-                {pageNumber == 1 ? null : <button onClick={e => setPageNumber(prevState => prevState - 1)}>Wstecz</button>}
-                {pageNumber == 6 ? null :<button onClick={e => setPageNumber(prevState => prevState + 1)}>Dalej</button>}
-            </div>
+            </div>            
         </section>
         <div className={style.separator}/>
         </>

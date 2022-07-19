@@ -10,9 +10,6 @@
     .radioInputs {
         display: flex;
         flex-direction: column;
-        [class = "checkedRadio"] {
-            background-color: $colorYellow;
-        }
 
         div {
             font-size: 24px;
@@ -36,5 +33,23 @@
         input {
             display: none;
         }
+
     }
+}
+
+.active {
+    background-color: $colorYellow;
+}
+
+.footer {
+
+    button {
+        padding: 20px 50px;
+        border: 1px color black;
+        background-color: transparent;
+        margin-top: 100px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
 }

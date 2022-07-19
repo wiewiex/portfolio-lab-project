@@ -2,11 +2,13 @@ import { useDispatch } from "react-redux";
 import { setPage1Data } from "../../../redux/actions/dataFromForm";
 import style from "../../../styles/oddaj-rzeczy/form/Page1.module.scss";
 import { useState, useEffect } from "react";
+import { useRef } from "react";
 
-export default function Page1 () {
+export default function Page1 ({ setPageNumber }) {
     
     const dispatch = useDispatch();
     const [page1State, setPage1State] = useState(null);
+    const radioInputs = useRef();
 
     const handleChange = (key, value) => {
         setPage1State(prevState => {
@@ -17,78 +19,60 @@ export default function Page1 () {
         })
     }
 
-    useEffect(()=>{
-
-        if (page1State) {
+    const handleClick = () => {
         dispatch(setPage1Data(page1State));
-        }
+    }  
 
-    },[page1State]);
 
-    const handleClick = (e) => {
-           
-        e.target.classList.add("checkedRadio");
+    const setClassName = () => {
+        const divs = [...radioInputs.current.children]
+        divs.forEach(el => {
+            el.children[0].className = "";
+            if (el.children[1].checked) {
+                el.children[0].className = style.active;
+            }
+        })
     }
 
+    useEffect(() => {
+
+        setClassName()
+    },[]);  
+
     return(
+        <>
         <form className={style.formContainer}>
             <h2>Zaznacz co chcesz oddać</h2>
-            <div className={style.radioInputs}>
-                <div>
-                    <label onClick={handleClick}htmlFor="radio1"></label>
-                    <input
-                    id="radio1"
-                    name="rzeczy"
-                    value="ubrania, które nadają się do ponownego użycia"
-                    type="radio"
-                    onChange={e => handleChange(e.target.name, e.target.value)}                    />
-                    ubrania, które nadają się do ponownego użycia
-                </div>
-                <div>
-                    <label onClick={handleClick}htmlFor="radio2"></label>
-                    <input
-                    id="radio2"
-                    name="rzeczy"
-                    value="ubrania, do wyrzucenia"
-                    type="radio"
-                    onChange={e => handleChange(e.target.name, e.target.value)}
-                    />
-                    ubrania, do wyrzucenia
-                </div>
-                <div>
-                    <label onClick={handleClick}htmlFor="radio3"></label>
-                    <input
-                    id="radio3"
-                    name="rzeczy"
-                    value="zabawki"
-                    type="radio"
-                    onChange={e => handleChange(e.target.name, e.target.value)}
-                    />
-                    zabawki
-                </div>
-                <div>
-                    <label onClick={handleClick}htmlFor="radio4"></label>
-                    <input
-                    id="radio4"
-                    name="rzeczy"
-                    value="książki"
-                    type="radio"
-                    onChange={e => handleChange(e.target.name, e.target.value)}
-                    />
-                    książki
-                </div>
-                <div>
-                    <label onClick={handleClick}htmlFor="radio5"></label>
-                    <input
-                    id="radio5"
-                    name="rzeczy"
-                    value="Inne"
-                    type="radio"
-                    onChange={e => handleChange(e.target.name, e.target.value)}
-                    />
-                    Inne
-                </div>                
+            <div ref={radioInputs} className={style.radioInputs}>
+                <Radio value="ubrania, które nadają się do ponownego użycia" id="radio1" handleChange={handleChange} setClassName={setClassName} />
+                <Radio value="ubrania, do wyrzucenia" id="radio2" handleChange={handleChange} setClassName={setClassName} />
+                <Radio value="zabawki" id="radio3" handleChange={handleChange} setClassName={setClassName} />
+                <Radio value="książki" id="radio4" handleChange={handleChange} setClassName={setClassName} />
+                <Radio value="inne" id="radio5" handleChange={handleChange} setClassName={setClassName} />
             </div>
         </form>
+        <div className={style.footer}>                
+            <button onClick={() => {setPageNumber(prevState => prevState + 1); handleClick(); }}>Dalej</button>              
+        </div>
+        </>
+    )
+}
+
+const Radio = ({id, value, handleChange, setClassName}) => {    
+    return(
+        <div>
+            <label htmlFor={id}/>
+            <input
+            id={id}
+            name="rzeczy"
+            value={value}
+            type="radio"
+            onChange={e => {
+                handleChange(e.target.name, e.target.value);
+                setClassName();
+                }
+            }/>
+            {value}
+        </div>       
     )
 }
