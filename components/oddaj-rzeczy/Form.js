@@ -4,6 +4,7 @@ import Page2 from "./form/page2";
 import Page3 from "./form/page3";
 import Page4 from "./form/page4";
 import Page5 from "./form/page5";
+import Page6 from "./form/page6";
 
 import { useState } from "react";
 
@@ -30,6 +31,10 @@ export default function Form () {
 
     if (pageNumber == 5) {
         currentPage = <Page5 setPageNumber={setPageNumber}/>
+    }
+
+    if (pageNumber == 6) {
+        currentPage = <Page6 setPageNumber={setPageNumber}/>
     }
 
     return(

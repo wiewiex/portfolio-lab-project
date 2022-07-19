@@ -63,10 +63,12 @@
 
                 input {
                     margin-top: 20px;
+                    padding-bottom: 10px ;
                     width: 100%;
                     border: none;
                     background-color: transparent;
                     border-bottom: 1px solid $colorBlack;
+                    font-size: 15px;
 
                 }
             }
@@ -80,6 +82,9 @@
             border-bottom: 1px solid $colorBlack;
             overflow: hidden;
             resize: none;
+            font-family: 'Open Sans', sans-serif;;
+            font-size: 14px;
+            letter-spacing: 0.2px;
         }
 
         button {

@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 body {
     font-family: $fontBase;
 }
@@ -45,5 +47,9 @@ body {
 
     h3 {
         margin: 0 5px;
+    }
+
+    .oddaj-rzeczy {
+        border: 1px ridge lightgray;
     }
 }
