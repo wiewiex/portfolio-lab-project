@@ -51,8 +51,8 @@ export default function Page1 ({ setPageNumber }) {
                 <Radio value="inne" id="radio5" handleChange={handleChange} setClassName={setClassName} />
             </div>
         </form>
-        <div className={style.footer}>                
-            <button onClick={() => {setPageNumber(prevState => prevState + 1); handleClick(); }}>Dalej</button>              
+        <div>                
+            <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState + 1); handleClick(); }}>Dalej</button>              
         </div>
         </>
     )

@@ -38,9 +38,9 @@ export default function Page2 ({ setPageNumber }) {
                 </select>
             </div>            
         </form>
-        <div className={style.footer}>
-            <button onClick={() => {setPageNumber(prevState => prevState - 1); handleClick(); }}>Wstecz</button>                     
-            <button onClick={() => {setPageNumber(prevState => prevState + 1); handleClick(); }}>Dalej</button>                 
+        <div>
+            <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState - 1); handleClick(); }}>Wstecz</button>                     
+            <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState + 1); handleClick(); }}>Dalej</button>                 
         </div>
         </>
     )

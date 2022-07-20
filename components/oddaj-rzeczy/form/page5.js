@@ -56,9 +56,9 @@ export default function Page5 ({ setPageNumber }) {
                 </div>
             </form>            
         </div>
-        <div className={style.footer}>
-            <button onClick={() => {setPageNumber(prevState => prevState - 1)}}>Wstecz</button>                   
-            <button onClick={() => {setPageNumber(prevState => prevState + 1)}}>Potwierdzam</button>                 
+        <div>
+            <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState - 1)}}>Wstecz</button>                   
+            <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState + 1)}}>Potwierdzam</button>                 
         </div>
         </>
     )
