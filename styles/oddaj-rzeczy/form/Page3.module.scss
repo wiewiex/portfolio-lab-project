@@ -1,4 +1,6 @@
 @import "../../globals/colors.scss";
+@import "../../globals/mixins.scss";
+
 
 .formContainer {
     h2 {
@@ -31,7 +33,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 700px;    
+    width: 700px;
+    @include mobile {
+        width: 100%;
+    }    
 
     label {
         border: 1px solid black;
@@ -64,6 +69,10 @@
         font-size: 18px;
         background-color: transparent;
         border: 1px solid black;
+        @include mobile {
+            width: 100%;
+            max-width: 500px;
+        }
     }
 }
 

@@ -1,12 +1,23 @@
+@import "../../globals/mixins.scss";
+
 .formContainer {
+    
     h2 {
         margin-bottom: 100px;
         font-size: 36px;
         font-weight: 600;
+        @include mobile {
+            margin-bottom: 50px;
+            font-size: 28px;
+        }
     }
     form {
         display: flex;
         margin-bottom: 80px;
+        @include mobile {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -38,6 +49,10 @@
 
 .address {
     margin-right: 100px;
+    @include mobile {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
 }
 
 .footer {

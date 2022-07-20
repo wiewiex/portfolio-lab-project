@@ -1,17 +1,24 @@
 @import "../globals/colors.scss";
+@import "../globals/mixins.scss";
 
 .aboutContainer {
-    height: 700px;
     display: flex;
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
 .textContainer {
+    padding: 100px 0;
     width: 50%;
     background-color: $colorLightGray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include mobile {
+        width: 100%;
+    }
 
     h2 {
         font-size: 38px;
@@ -26,6 +33,11 @@
         margin: 30px;
         width: 50%;
         letter-spacing: 0.6px;
+        @include mobile {
+            font-size: 24px;
+            width: 90%;
+            margin: 50px;
+        }
     }
 
     .signature {
@@ -36,7 +48,11 @@
 }
 
 .imageContainer {
+    padding: 70px 0;
     width: 50%;
     background-image: url("/assets/People.jpg");
     background-size: cover;
+    @include mobile {
+        display: none;
+    }
 }

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 export default function Page5 ({ setPageNumber }) {
     const state = useSelector(state => state);
     const dataFromForm = state.dataFromForm;
-    console.log(dataFromForm);
+    // console.log(dataFromForm);
 
     return(
         <>
@@ -13,11 +13,11 @@ export default function Page5 ({ setPageNumber }) {
             <h4>Oddajesz:</h4>
             <div>
                 <img src="/assets/Icon-1.svg"/>
-                <p>{dataFromForm[1].worki} worki, {dataFromForm[0].rzeczy}, {dataFromForm[2].komu_oddac}</p>
+                <p>{dataFromForm[1] ? dataFromForm[1].worki + " worki,": ""} {dataFromForm[0] ? dataFromForm[0].rzeczy +", " : ""} {dataFromForm[2] ? dataFromForm[2].komu_oddac : ""}</p>
             </div>
             <div>
                 <img src="/assets/Icon-4.svg"/>
-                <p>dla lokalizacji: {dataFromForm[2].miasto}</p>
+                <p>dla lokalizacji: {dataFromForm[2] ? dataFromForm[2].miasto : ""}</p>
             </div>
             <form>
                 <div className={style.address}>

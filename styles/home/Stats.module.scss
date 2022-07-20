@@ -1,15 +1,21 @@
 @import "../globals/colors.scss";
+@import "../globals/mixins.scss";
 
 .statsContainer {
-    height: 300px;
     background-color: $colorYellow;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include mobile {
+        flex-direction: column;
+        height: 100%;
+        padding: 50px 0;
+    }
 
     div {
         width: 330px;
         text-align: center;
+        padding: 40px 0;
 
         h2 {
             font-size: 90px;

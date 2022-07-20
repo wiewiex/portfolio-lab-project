@@ -1,4 +1,6 @@
 @import "../../globals/colors.scss";
+@import "../../globals/mixins.scss";
+
 
 .formContainer {
     h2 {
@@ -15,10 +17,10 @@
             font-size: 24px;
             font-weight: 300;
             margin-bottom: 1px;
-            box-sizing: border-box;
-            padding: 20px;
+            padding: 20px 0;
             display: flex;
             align-items:center;
+            height: 30px;
         }
 
         label {
@@ -29,6 +31,7 @@
             margin-right: 20px;
             cursor: pointer;
         }
+
 
         input {
             display: none;

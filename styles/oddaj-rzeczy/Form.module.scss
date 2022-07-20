@@ -1,4 +1,6 @@
 @import "../globals/colors.scss";
+@import "../globals/mixins.scss";
+
 
 .formsContainer {
     height: 883px;
@@ -10,6 +12,10 @@
     justify-content: space-between;
     padding: 30px 140px 100px 140px;
     box-sizing: border-box;
+    @include mobile {
+        width: 100%;
+        padding: 40px;
+    }
 }
 
 .header {
