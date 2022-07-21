@@ -7,8 +7,9 @@
         font-size: 36px;
         font-weight: 600;
         @include mobile {
-            margin-bottom: 50px;
-            font-size: 28px;
+            margin: 40px 0;
+            font-size: 25px;
+
         }
     }
     form {
@@ -51,8 +52,12 @@
     margin-right: 100px;
     @include mobile {
         margin-right: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
+}
+
+.footerButtons {
+    display: flex;
 }
 
 .footerButton {

@@ -71,7 +71,12 @@
     margin-right: 100px;
 }
 
-
+.footerButtons {
+    display: flex;
+    @include mobile {
+        justify-content: center;
+    }
+}
 
 .footerButton {
     padding: 20px 50px;
@@ -79,4 +84,7 @@
         background-color: transparent;
         margin-right: 20px;
         cursor: pointer;
+        @include mobile {
+            margin: 0 5px;
+        }
 }

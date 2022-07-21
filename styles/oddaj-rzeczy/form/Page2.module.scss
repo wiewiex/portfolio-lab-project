@@ -5,7 +5,8 @@
         font-size: 36px;
         margin-bottom: 50px;
         @include mobile {
-            font-size: 28px;
+            margin: 100px 0 100px 0;
+            font-size: 20px
         }
     }
 }
@@ -31,6 +32,10 @@
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+.footerButtons {
+    display: flex;
 }
 
 .footerButton {

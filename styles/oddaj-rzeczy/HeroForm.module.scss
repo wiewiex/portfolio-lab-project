@@ -49,7 +49,8 @@
     text-align: center;
     line-height: 1.2;
     @include mobile {
-        font-size: 30px;
+        font-size: 25px;
+        line-height: 1.5;
     }
 }
 
@@ -62,7 +63,8 @@
         padding: 15px 50px;
         margin-bottom: 50px;
         @include mobile {
-            font-size: 30px;
+            font-size: 25px;
+            padding: 0;
         }
 }
 
@@ -70,6 +72,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .singleStep {

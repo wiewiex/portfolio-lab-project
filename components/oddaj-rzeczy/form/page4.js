@@ -65,7 +65,7 @@ export default function Page4 ({ setPageNumber }) {
                 </div>
             </form>            
         </div>
-        <div>
+        <div className={style.footerButtons}>
             <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState - 1); handleClick(); }}>Wstecz</button>                  
             <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState + 1); handleClick(); }}>Dalej</button>                
         </div>

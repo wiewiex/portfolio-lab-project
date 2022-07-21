@@ -37,6 +37,29 @@ body {
      }
 }
 
+.mainMenu {
+    @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    a {
+        @include mobile {
+            font-size: 9px;
+            margin: 3px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    }
+
+    a:hover {
+        @include mobile {
+            background-color: lightgray;
+        }
+    }
+}
+
 .authButtonsContainer {
     display: flex;
     align-items: center;

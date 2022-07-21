@@ -60,7 +60,7 @@ export default function Page3 ({ setPageNumber }) {
                 <input type="text" name="nazwa fundacji" onChange={e => handleChange(e.target.name, e.target.value)}/>
             </div>
         </form>
-        <div>
+        <div className={style.footerButtons}>
             <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState - 1); handleClick(); }}>Wstecz</button>                   
             <button className={style.footerButton} onClick={() => {setPageNumber(prevState => prevState + 1); handleClick(); }}>Dalej</button>                
         </div>

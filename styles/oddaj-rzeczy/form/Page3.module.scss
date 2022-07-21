@@ -33,9 +33,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 700px;
     @include mobile {
         width: 100%;
+        margin: 50px 0 20px 0;
     }    
 
     label {
@@ -57,6 +57,9 @@
 
 .otherFund {
     margin-bottom: 80px;
+    @include mobile {
+        margin-bottom: 30px;
+    }
     h4 {
         margin-bottom: 50px;
         font-size: 20px;
@@ -74,6 +77,10 @@
             max-width: 500px;
         }
     }
+}
+
+.footerButtons {
+    display: flex;
 }
 
 
